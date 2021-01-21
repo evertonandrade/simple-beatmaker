@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Baloo Chettan 2", cursive;
+  background-color: #282a36;
+  color: #f8f8f2;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 2.4rem;
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: #8be9fd;
+}
+.snare-pad {
+  background: #ff79c6;
+}
+.hihat-pad {
+  background: #ffb86c;
+}
+
+.kick-pad.active {
+  background: #00cefc;
+}
+.snare-pad.active {
+  background: #ff0090;
+}
+.hihat-pad.active {
+  background: #ff8400;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 4rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  justify-content: flex-end;
+  flex: 5;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 3;
+  margin: 0rem 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: #6272a4;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: #6272a4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+select {
+  width: 30%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.mute.active {
+  background: #9098ac;
+}
+
+.tempo {
+  margin: 2rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: #989aa0;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 945px) {
+  html {
+    font-size: 55%;
+  }
+  .kick-track,
+  .snare-track,
+  .hihat-track {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .kick-track,
+  .snare-track,
+  .hihat-track {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .controls {
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+  }
+
+  .kick,
+  .snare,
+  .hihat {
+    justify-content: center;
+  }
+}
