@@ -4,4 +4,4 @@ A simple beatmaker developed with VanillaJS for Javascript study purposes.
 
 You can see the the final result [here](https://simple-beatmaker.netlify.app/).
 
-![screenshot](/assets/img/simple-beatmaker-screenshot.pngimg/screenshot.png)
+![simple-beatmaker-screenshot](assets/img/simple-beatmaker-screenshot.png)
